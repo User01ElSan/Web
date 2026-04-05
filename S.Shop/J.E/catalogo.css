@@ -1,14 +1,14 @@
-/* R */
+/* reset */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* FONDO */
+/* Fondo */
 .fondo {
     height: 100vh; /* ocupa toda la pantalla */
-    background-image: url("img/.fondo.jpg"); /* imagen */
-    background-size: cover; /* cubre toda la pantalla */
+    background-image: url("img/fondo.jpg"); /* imagen */
+    background-size: cover; /* cubre la pantalla */
     background-position: center;
     background-repeat: no-repeat;
 
@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-/* sobre-texto*/
+/* sobre-texto */
 .contenido {
     color: white;
     background-color: rgba(0,0,0,0.6);
@@ -34,7 +34,7 @@
     font-size: 2rem;
 }
 
-/* footers */
+/* footer */
 footer {
     background-color: brown;
     color: white;
