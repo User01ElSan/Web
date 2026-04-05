@@ -74,6 +74,14 @@ ul, ol {
     display: block;
 }
 
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background-color: black;
+}
+
 /* footer */
 
 footer {
