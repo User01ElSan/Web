@@ -1,0 +1,178 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2.5rem;
+    background-color: rgb(0, 0, 0);
+}
+
+#Menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.navegador-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5rem;
+}
+
+.navegador-menu > li {
+    position: relative;
+}
+
+.navegador-menu li a {
+    display: block;
+    padding: 0.8rem 2.4rem;
+    background-color: black;
+    color: blanchedalmond;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.navegador-menu li a:hover {
+    background-color: #551818;
+}
+
+.navegador-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+}
+
+.navegador-menu li:hover > ul {
+    display: block;
+}
+
+.navegador-menu li ul li {
+    width: 150px;
+}
+
+.logo {
+    background-color: black;
+    padding-left: 2rem;
+}
+
+.logo-principal {
+    width: 20rem;
+    display: block;
+}
+
+/* logo fondo */
+
+.hero {
+    height: 90vh; /*ocupa casi toda la pantalla*/
+    background-image: url(https://th.bing.com/th/id/OIP.dTDycSvqElZ5h9HxrgJAMgHaE8?w=270&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3); /* tu imagen */;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text {
+    color: white;
+    background-color: rgba(105, 95, 95, 0.23);
+    padding: 20px;
+    border-radius: 10px
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+}
+
+.hero-text p {
+    font-size: 2rem;
+}
+
+#contacto {
+    background-color: #111;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 40px;
+}
+
+.redes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* BOTÓN WHATSAPP */
+.btn-wsp {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.8rem;
+}
+
+.btn-wsp:hover {
+    background-color: #1ebe5d;
+}
+
+/* BOTÓN INSTAGRAM */
+.btn-ig {
+    background-color: #E1306C;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.8rem;
+}
+
+.btn-ig:hover {
+    background-color: #c72b5c;
+}
+
+/* footer */
+
+footer {
+    
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+footer .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+hr {
+    width: 80%;
+    margin: 5rem auto;
+}
+
+footer {
+    padding: 20px;
+    flex: 1;
+    background-color: brown;
+    text-align: center;
+}

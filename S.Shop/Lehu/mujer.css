@@ -1,0 +1,100 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2.5rem;
+    background-color: rgb(0, 0, 0);
+}
+
+#Menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.navegador-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5rem;
+}
+
+.navegador-menu > li {
+    position: relative;
+}
+
+.navegador-menu li a {
+    display: block;
+    padding: 0.8rem 2.4rem;
+    background-color: black;
+    color: blanchedalmond;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.navegador-menu li a:hover {
+    background-color: #551818;
+}
+
+.navegador-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+}
+
+.navegador-menu li:hover > ul {
+    display: block;
+}
+
+.navegador-menu li ul li {
+    width: 150px;
+}
+
+.logo {
+    background-color: black;
+    padding-left: 2rem;
+}
+
+.logo-principal {
+    width: 20rem;
+    display: block;
+}
+
+/* footer */
+
+footer {
+    background-image: url(IMG/imgFooter.jpg);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+footer .social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+hr {
+    width: 80%;
+    margin: 5rem auto;
+}
+
