@@ -1,0 +1,43 @@
+/* R */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* FONDO */
+.fondo {
+    height: 100vh; /* ocupa toda la pantalla */
+    background-image: url("img/.fondo.jpg"); /* imagen */
+    background-size: cover; /* cubre toda la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* sobre-texto*/
+.contenido {
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contenido h1 {
+    font-size: 4rem;
+}
+
+.contenido p {
+    font-size: 2rem;
+}
+
+/* footers */
+footer {
+    background-color: brown;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
