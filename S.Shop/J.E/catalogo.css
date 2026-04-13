@@ -4,11 +4,21 @@
     padding: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
 /* Fondo */
 .fondo {
-    height: 100vh; /* ocupa toda la pantalla */
-    background-image: url("img/fondo.jpg"); /* imagen */
-    background-size: cover; /* cubre la pantalla */
+    height: 100vh;
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -16,6 +26,21 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+}
+
+.fondo::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    animation: fade 6s infinite alternate;
+}
+
+@keyframes fade {
+    from { background: rgba(0,0,0,0.2); }
+    to { background: rgba(0,0,0,0.6); }
 }
 
 /* sobre-texto */
@@ -50,6 +75,13 @@
     text-align: center;
     border-radius: 10px;
     color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.7);
 }
 
 /* imagenes */
@@ -84,21 +116,26 @@
 .btn-comprar {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px;
-    background-color: crimson;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, crimson, darkred);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .btn-comprar:hover {
-    background-color: darkred;
+    background: linear-gradient(90deg, darkred, black);
+    transform: translateY(-3px);
 }
 
 /* footer */
 footer {
-    background-color: brown;
+    background: linear-gradient(180deg, #551818, #2f2b2b);
     color: white;
     text-align: center;
     padding: 20px;
 }
+
+
