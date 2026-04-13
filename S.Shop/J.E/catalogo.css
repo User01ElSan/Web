@@ -80,9 +80,21 @@ body {
 }
 
 .producto:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transición suave */
 }
+
+.producto:hover {
+    transform: scale(1.05); /* se agranda un poco */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.7); /* sombra más fuerte al pasar el mouse */
+}
+
 
 /* imagenes */
 .producto img {
@@ -137,5 +149,3 @@ footer {
     text-align: center;
     padding: 20px;
 }
-
-
