@@ -76,3 +76,19 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #990033;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #990033;
+    box-shadow: 0 0 10px #990033;
+}
