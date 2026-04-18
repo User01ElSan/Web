@@ -192,12 +192,29 @@ ul, ol {
     color: #ccc;
 }
 
+/* compra boton */
+.btn-comprar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, crimson, darkred);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
 /* HOVER */
 .producto:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
 }
 
+.btn-comprar:hover {
+    background: linear-gradient(90deg, darkred, black);
+    transform: translateY(-3px);
+}
 /* btn-ver más */
 .btn-ver-mas {
     display: inline-block;
