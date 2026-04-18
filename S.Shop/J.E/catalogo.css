@@ -52,11 +52,13 @@ body {
 }
 
 .contenido h1 {
-    font-size: 4rem;
+    font-size: 6rem;
+    margin-bottom: 1rem;
 }
 
 .contenido p {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 0,5rem;
 }
 
 .titulo-seccion {
