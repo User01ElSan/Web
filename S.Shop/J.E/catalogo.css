@@ -149,3 +149,13 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+#Menu {
+    position: relative;
+    z-index: 1000;
+}
+
+.fondo {
+    position: relative;
+    z-index: 1;
+}
