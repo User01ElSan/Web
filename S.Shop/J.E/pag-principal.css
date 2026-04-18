@@ -146,6 +146,74 @@ ul, ol {
     background-color: #c72b5c;
 }
 
+/* DESTACADOS */
+.destacados {
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.destacados h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+/* PRODUCTOS */
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+}
+
+/* TARJETAS DE PRODUCTO */
+.producto {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.producto p {
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+/* HOVER */
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* btn-ver más */
+.btn-ver-mas {
+    display: inline-block;
+    background-color: #551818;
+    color: white;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    transition: background 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: #8a2b2b;
+}
+
 /* footer */
 
 footer {
