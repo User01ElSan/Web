@@ -111,6 +111,19 @@ ul, ol {
     padding: 40px;
 }
 
+.titulo-contacto {
+    display: inline-block;
+    background-color: #551818;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.titulo-contacto:hover {
+    transform: scale(1.05);
+}
+
 .redes {
     margin-top: 20px;
     display: flex;
