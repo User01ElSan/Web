@@ -91,6 +91,18 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.producto {
+    overflow: hidden;
+}
+
+.producto img {
+    transition: transform 0.4s ease;
+}
+
+.producto:hover img {
+    transform: translateY(-10px);
+}
+
 .producto:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
