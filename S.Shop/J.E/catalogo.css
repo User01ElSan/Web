@@ -59,6 +59,18 @@ body {
     font-size: 2rem;
 }
 
+.titulo-seccion {
+    display: block;
+    width: fit-content;
+    margin: 3rem auto;
+    background-color: #551818;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
 /* contenedor de los productos */
 .productos {
     display: grid;
