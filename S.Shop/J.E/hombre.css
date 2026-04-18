@@ -82,6 +82,19 @@ ul, ol {
     background-color: black;
 }
 
+.titulo-seccion {
+    display: block;
+    width: fit-content;
+    margin: 3rem auto;
+    background-color: #551818;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    font-size: 3.5rem;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
 /* boton de compra */
 .btn-comprar {
     display: inline-block;
