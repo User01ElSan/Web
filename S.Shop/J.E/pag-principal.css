@@ -58,7 +58,6 @@ ul, ol {
     color: blanchedalmond;
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
 }
 
 .navegador-menu li a:hover {
@@ -114,11 +113,13 @@ ul, ol {
 }
 
 .hero-text h1 {
-    font-size: 4rem;
+    font-size: 6rem;
+    margin-bottom: 1rem;
 }
 
 .hero-text p {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
 
 .btn-hero {
