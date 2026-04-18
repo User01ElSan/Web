@@ -131,6 +131,12 @@ ul, ol {
     gap: 20px;
 }
 
+.redes a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* BOTÓN WHATSAPP */
 .btn-wsp {
     background-color: #25D366;
