@@ -23,3 +23,14 @@ body {
       margin-top: 20px;
       font-weight: bold;
     }
+
+    .carrito-btn {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.carrito-btn:hover {
+  color: red;
+}
