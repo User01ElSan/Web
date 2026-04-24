@@ -10,7 +10,7 @@ let favoritos = [];
 function agregarAlCarrito(nombre, precio) {
   carrito.push({ nombre, precio });
 
-  localStorage.setItem("carrito", JSON.stringify(carrito)); // 🔥 NUEVO
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 
   if (typeof mostrarCarrito === "function") {
     mostrarCarrito();
@@ -53,7 +53,7 @@ function buscarProducto() {
 }
 
 
-// LOGIN SIMULADO
+// LOGIN 
 
 function login() {
   const user = document.getElementById("usuario").value;
@@ -61,10 +61,14 @@ function login() {
   const mensaje = document.getElementById("mensaje-login");
 
   if (user === "admin" && pass === "1234") {
-    mensaje.textContent = "Bienvenido 👋";
+    mensaje.textContent = "Bienvenido";
     mensaje.style.color = "green";
+
+    setTimeout(() => {
+  window.location.href = "catalogo.html";
+}, 1000);
   } else {
-    mensaje.textContent = "Datos incorrectos ❌";
+    mensaje.textContent = "Datos incorrectos";
     mensaje.style.color = "red";
   }
 }
@@ -90,12 +94,12 @@ function validarFormulario() {
   const mensaje = document.getElementById("mensaje-form");
 
   if (correo === "" || !correo.includes("@")) {
-    mensaje.textContent = "Correo inválido ❌";
+    mensaje.textContent = "Correo inválido";
     mensaje.style.color = "red";
     return false;
   }
 
-  mensaje.textContent = "Formulario enviado correctamente ✅";
+  mensaje.textContent = "Formulario enviado correctamente";
   mensaje.style.color = "green";
   return true;
 }
@@ -164,21 +168,21 @@ function validarCompra() {
   const cvv = document.getElementById("cvv").value.trim();
 
   if (nombre === "" || tarjeta === "" || fecha === "" || cvv === "") {
-    alert("Todos los campos son obligatorios ❌");
+    alert("Todos los campos son obligatorios");
     return false;
   }
 
   if (tarjeta.length < 13 || tarjeta.length > 16) {
-    alert("Número de tarjeta inválido ❌");
+    alert("Número de tarjeta inválido");
     return false;
   }
 
   if (cvv.length !== 3) {
-    alert("CVV inválido ❌");
+    alert("CVV inválido");
     return false;
   }
 
-  alert("Compra realizada con éxito ✅");
+  alert("Compra realizada con éxito");
 
   window.location.href = "Valoracion.html"; // redirige después
 

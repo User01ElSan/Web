@@ -231,6 +231,20 @@ ul, ol {
     margin-bottom: 3rem;
 }
 
+#usuario, #password {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  cursor: pointer;
+}
+
 /* PRODUCTOS */
 .contenedor-productos {
     display: grid;
