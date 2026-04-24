@@ -156,3 +156,31 @@ function vaciarCarrito() {
   localStorage.removeItem("carrito");
   cargarCarrito();
 }
+
+function validarCompra() {
+  const nombre = document.getElementById("nombre").value.trim();
+  const tarjeta = document.getElementById("tarjeta").value.trim();
+  const fecha = document.getElementById("fecha").value;
+  const cvv = document.getElementById("cvv").value.trim();
+
+  if (nombre === "" || tarjeta === "" || fecha === "" || cvv === "") {
+    alert("Todos los campos son obligatorios ❌");
+    return false;
+  }
+
+  if (tarjeta.length < 13 || tarjeta.length > 16) {
+    alert("Número de tarjeta inválido ❌");
+    return false;
+  }
+
+  if (cvv.length !== 3) {
+    alert("CVV inválido ❌");
+    return false;
+  }
+
+  alert("Compra realizada con éxito ✅");
+
+  window.location.href = "Valoracion.html"; // redirige después
+
+  return false;
+}

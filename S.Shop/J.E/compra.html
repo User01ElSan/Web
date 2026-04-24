@@ -33,7 +33,7 @@
 
     <div class="formulario">
         <h2>Haz tu Pedido!!</h2>
-        <form action="reservar" method="post">
+        <form onsubmit="return validarCompra()">
             <label for="nombre">Nombre y Apellidos:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
 
@@ -49,7 +49,7 @@
             <label for="comentario">Comentario:</label>
             <textarea id="comentario" name="comentario" rows="4" placeholder="Comentarios opcionales..."></textarea>
 
-            <a href="Valoracion.html" class="btn-comprar">Compra</a>
+            <button type="submit" class="btn-comprar">Comprar</button>
         </form>
     </div>
   
@@ -67,6 +67,8 @@
             <p>Adiel Ponce</p>
             
         </footer>
+
+<script src="script.js"></script>
 </body>
 
 </html>
