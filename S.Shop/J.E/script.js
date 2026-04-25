@@ -1,7 +1,7 @@
 
 // VARIABLES GLOBALES
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let favoritos = [];
 
 
@@ -11,6 +11,8 @@ function agregarAlCarrito(nombre, precio) {
   carrito.push({ nombre, precio });
 
   localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  alert(nombre + " agregado al carrito ");
 
   if (typeof mostrarCarrito === "function") {
     mostrarCarrito();
@@ -129,19 +131,18 @@ function cargarCarrito() {
 
   if (!contenedor) return;
 
+  const datos = JSON.parse(localStorage.getItem("carrito")) || [];
+
   contenedor.innerHTML = "";
   let suma = 0;
 
-  carrito.forEach((producto, index) => {
+  datos.forEach((producto) => {
     const div = document.createElement("div");
 
-    div.innerHTML = `
-      ${producto.nombre} - S/ ${producto.precio}
-      <button onclick="eliminarProducto(${index})">Eliminar</button>
-    `;
+    div.textContent = producto.nombre + " - S/ " + Number(producto.precio);
 
     contenedor.appendChild(div);
-    suma += producto.precio;
+    suma += Number(producto.precio);
   });
 
   total.textContent = "Total: S/ " + suma;
