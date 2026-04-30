@@ -1,0 +1,187 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Fondo */
+.fondo {
+    height: 100vh;
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.fondo::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    animation: fade 6s infinite alternate;
+}
+
+@keyframes fade {
+    from { background: rgba(0,0,0,0.2); }
+    to { background: rgba(0,0,0,0.6); }
+}
+
+/* sobre-texto */
+.contenido {
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contenido h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.contenido p {
+    font-size: 3rem;
+    margin-bottom: 0,5rem;
+}
+
+.titulo-seccion {
+    display: block;
+    width: fit-content;
+    margin: 3rem auto;
+    background-color: #551818;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+/* contenedor de los productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: black;
+}
+
+/* tarjeta del producto */
+.producto {
+    background-color: #111;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto {
+    overflow: hidden;
+}
+
+.producto img {
+    transition: transform 0.4s ease;
+}
+
+.producto:hover img {
+    transform: translateY(-10px);
+}
+
+.producto:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+/* imagenes */
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* nombres */
+.producto h3 {
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+/* descripcion */
+.descripcion {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+/* precios */
+.precio {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* compra boton */
+.btn-comprar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, crimson, darkred);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: linear-gradient(90deg, darkred, black);
+    transform: translateY(-3px);
+}
+
+/* footer */
+footer {
+    background: linear-gradient(180deg, #551818, #2f2b2b);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#Menu {
+    position: relative;
+    z-index: 1000;
+}
+
+.fondo {
+    position: relative;
+    z-index: 1;
+}
+
+/* para el buscador */
+
+#buscador {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  display: block;
+}
