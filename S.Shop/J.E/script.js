@@ -136,10 +136,23 @@ function cargarCarrito() {
   contenedor.innerHTML = "";
   let suma = 0;
 
-  datos.forEach((producto) => {
-    const div = document.createElement("div");
+  // 🔹 SI ESTÁ VACÍO
+  if (datos.length === 0) {
+    contenedor.innerHTML = "<p style='text-align:center;'>Tu carrito está vacío 🛒</p>";
+    total.textContent = "";
+    return;
+  }
 
-    div.textContent = producto.nombre + " - S/ " + Number(producto.precio);
+  // 🔹 SI HAY PRODUCTOS
+  datos.forEach((producto, index) => {
+    const div = document.createElement("div");
+    div.classList.add("item-carrito"); // 👈 IMPORTANTE para el CSS
+
+    div.innerHTML = `
+      <span>${producto.nombre}</span>
+      <p>S/ ${Number(producto.precio)}</p>
+      <button class="btn-eliminar" onclick="eliminarProducto(${index})">X</button>
+    `;
 
     contenedor.appendChild(div);
     suma += Number(producto.precio);
@@ -188,4 +201,21 @@ function validarCompra() {
   window.location.href = "Valoracion.html"; // redirige después
 
   return false;
+}
+
+const form = document.querySelector(".form-contacto");
+
+if (form) {
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const mensaje = document.createElement("p");
+    mensaje.textContent = "Mensaje enviado correctamente";
+    mensaje.style.color = "green";
+    mensaje.style.textAlign = "center";
+
+    this.appendChild(mensaje);
+
+    this.reset();
+  });
 }

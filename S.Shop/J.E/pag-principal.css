@@ -318,6 +318,52 @@ button {
     background-color: #8a2b2b;
 }
 
+.form-contacto {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.form-contacto h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.form-contacto label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+}
+
+.form-contacto button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-contacto button:hover {
+  background-color: #c2185b;
+}
+
 /* footer */
 
 footer {
