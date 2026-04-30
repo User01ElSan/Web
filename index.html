@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="Es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="img/logo.png" type="imagen/x-icon">
+    <title>SexShop</title>
+
+</head>
+
+<body>
+
+    <div id="Menu">
+        <div class="logo">
+            <img class="logo-principal" src="img/logo.png" alt="logo-principal">
+        </div>
+        <ul class="navegador-menu">
+
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+                <a href="catalogo.html">Catalogo</a>
+                <ul>
+                    <li><a href="hombre.html">Hombres</a></li>
+                    <li><a href="mujer.html">Mujeres</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="carrito.html">Ver carrito</a></li>
+                </ul>
+            </li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+  
+<!-- HERO (IMAGEN DE FONDO) -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Bienvenido a SexShop</h1>
+            <p>Descubre productos exclusivos y placenteros para ti</p>
+            <p>Aquí no hay espacio para la vergüenza, solo ganas de pasarla bien</p>
+
+            <a href="catalogo.html" class="btn-hero">Ver catálogo</a>
+        </div>
+    </section>
+
+    <!-- iniciar sesión -->
+
+    <h2>Iniciar Sesión</h2>
+
+    <input type="text" id="usuario" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+
+    <button onclick="login()">Ingresar</button>
+
+    <p id="mensaje-login"></p>
+
+    <!-- PRODUCTOS DESTACADOS -->
+<section class="destacados">
+    <h2>Productos Destacados</h2>
+
+    <div class="contenedor-productos">
+
+        <div class="producto">
+            <img src="img/p.h 1.webp" alt="producto 1">
+            <h3>Latex Vagina</h3>
+
+            <p class="descripcion">
+                Material suave para el placer diario. Alta calidad.
+            </p>
+
+            <p class="precio">s/54</p>
+            <a href="compra.html" class="btn-comprar">Comprar</a>
+        </div>
+
+        <div class="producto">
+            <img src="img/ph mujer 1.webp" alt="producto 2">
+            <h3>Pene Latex</h3>
+
+            <p class="descripcion">
+            Hecho con materiales blandos y placenteros al tacto. 
+            Alta calidad y durabilidad.
+        </p>
+
+        <p class="precio">s/60</p>
+        <a href="compra.html" class="btn-comprar">Comprar</a>
+        </div>
+
+        <div class="producto">
+            <img src="img/p.h 3.webp" alt="producto 3">
+            <h3>Conjunto de Juguetes y Esposas Sexuales</h3>
+
+            <p class="descripcion">
+            Hecho para la dominación placentera de la pareja. 
+            Cuero suave y resistente a movimientos bruscos.
+        </p>
+
+        <p class="precio">s/200</p>
+        <a href="compra.html" class="btn-comprar">Comprar</a>
+        </div>
+
+        <div class="producto">
+            <img src="img/ph mujer 10.webp" alt="producto 4">
+            <h3>Lenceria colegiala mujer</h3>
+        
+        <p class="descripcion">
+            Hecho para recordar aquellos años juveniles con un toque sensual.
+        </p>
+
+        <p class="precio">s/110</p>
+        <a href="compra.html" class="btn-comprar">Comprar</a>
+        </div>
+
+    </div>
+
+    <a href="catalogo.html" class="btn-ver-mas">Ver catálogo completo</a>
+
+</section>
+
+    <!-- Contacto -->
+   <section id="contacto">
+    <h2 class="titulo-contacto">Contáctanos</h2>
+
+    <p>Teléfono: 902697308</p>
+    <p>Correo: sexshop@gmail.com</p>
+
+    <div class="redes">
+       <a href="https://wa.me/51902697308" target="_blank" class="btn-wsp">
+           <i class="fa-brands fa-whatsapp"></i> WhatsApp
+       </a> 
+
+        <a href="https://instagram.com" target="_blank" class="btn-ig">
+           <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+    </div>
+
+    <!-- 🔹 FORMULARIO -->
+  <form class="form-contacto">
+    <h3>Envíanos un mensaje</h3>
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Correo</label>
+    <input type="email" id="correo" required>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" rows="4" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+            <p>&copy; 2026 SexShop | Desarrollado por Grupo 1</p>
+            <p>Eliseo Sandoval</p>
+            <p>Verónica Rojas</p>
+            <p>Omayra Magde</p>
+            <p>Jefry Farid</p>
+            <p>Lady Pérez</p>
+            <p>Adiel Ponce</p>
+            
+        </footer>
+
+<script src="script.js" defer></script>
+</body>
+
+</html>
