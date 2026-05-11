@@ -22,7 +22,7 @@
                 <li><a href="hombre.html">Hombres</a></li>
                 <li><a href="mujer.html">Mujeres</a></li>
                 <li><a href="promociones.html">Promociones</a></li>
-                <li><a href="carrito.html">Ver carrito</a></li>
+                <li><a href="Carrito.html">Ver carrito</a></li>
             </ul>
         </li>
         <li><a href="index.html#contacto">Contacto</a></li>
@@ -61,7 +61,10 @@
                 <span class="precio-tachado">s/104</span>
                 <span class="precio-final">s/72.80</span>
             </div>
-            <a href="compra.html" class="btn-comprar">¡Aprovechar Oferta!</a>
+            <div class="combo-botones">
+                <a href="compra.html" class="btn-comprar">¡Aprovechar Oferta!</a>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Combo Placer Total', 72.80, 'img/p.h 1.webp')">Agregar al carrito</button>
+            </div>
         </div>
     </div>
 
@@ -91,7 +94,10 @@
                 <span class="precio-tachado">s/133</span>
                 <span class="precio-final">s/99.75</span>
             </div>
-            <a href="compra.html" class="btn-comprar">¡Aprovechar Oferta!</a>
+            <div class="combo-botones">
+                <a href="compra.html" class="btn-comprar">¡Aprovechar Oferta!</a>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Combo Noche Perfecta', 99.75, 'img/ph mujer 2.webp')">Agregar al carrito</button>
+            </div>
         </div>
     </div>
 
@@ -121,7 +127,10 @@
                 <span class="precio-tachado">s/250</span>
                 <span class="precio-final">s/200</span>
             </div>
-            <a href="compra.html" class="btn-comprar">¡Aprovechar Oferta!</a>
+            <div class="combo-botones">
+                <a href="compra.html" class="btn-comprar">¡Aprovechar Oferta!</a>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Combo Dominación Total', 200, 'img/p.h 3.webp')">Agregar al carrito</button>
+            </div>
         </div>
     </div>
 
@@ -137,5 +146,6 @@
     <p>Adiel Ponce</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

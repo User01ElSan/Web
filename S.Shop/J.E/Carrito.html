@@ -2,22 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Carrito - SXSHOP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - SexShop</title>
   <link rel="stylesheet" href="Carrito.css">
 </head>
 
 <body>
 
-<h1>Mi Carrito</h1>
+<h1>🛒 Mi Carrito</h1>
 
 <div id="contenedor-carrito"></div>
 
 <p id="total"></p>
 
-<button onclick="vaciarCarrito()">Vaciar carrito</button>
+<a href="compra.html" class="btn-checkout">Continuar con la compra →</a>
+<button id="btn-vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+<a href="catalogo.html" class="btn-seguir">Seguir comprando</a>
 
 <script src="script.js"></script>
-<script>cargarCarrito();
+<script>
+  cargarCarrito();
 </script>
+
 </body>
 </html>

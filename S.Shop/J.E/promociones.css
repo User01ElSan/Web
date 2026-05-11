@@ -167,6 +167,15 @@ body {
     color: crimson;
 }
 
+/* Contenedor de botones del combo */
+.combo-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 /* Botón comprar */
 .btn-comprar {
     display: inline-block;
@@ -185,6 +194,26 @@ body {
     background: linear-gradient(90deg, darkred, black);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(220, 20, 60, 0.5);
+}
+
+/* Botón agregar al carrito */
+.btn-agregar {
+    display: inline-block;
+    padding: 14px 35px;
+    background: transparent;
+    color: white;
+    border: 2px solid crimson;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background: crimson;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
 }
 
 /* Footer */

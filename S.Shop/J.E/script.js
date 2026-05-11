@@ -6,14 +6,10 @@ let favoritos = [];
 
 
 // CARRITO DE COMPRAS
-
-function agregarAlCarrito(nombre, precio) {
-  carrito.push({ nombre, precio });
-
+function agregarAlCarrito(nombre, precio, imagen) {
+  carrito.push({ nombre, precio, imagen: imagen || "" });
   localStorage.setItem("carrito", JSON.stringify(carrito));
-
-  alert(nombre + " agregado al carrito ");
-
+  alert(nombre + " agregado al carrito ✅");
   if (typeof mostrarCarrito === "function") {
     mostrarCarrito();
   }
@@ -22,30 +18,25 @@ function agregarAlCarrito(nombre, precio) {
 function mostrarCarrito() {
   const lista = document.getElementById("lista-carrito");
   const total = document.getElementById("total");
-
   lista.innerHTML = "";
   let suma = 0;
-
   carrito.forEach((producto) => {
     const li = document.createElement("li");
     li.textContent = producto.nombre + " - S/ " + producto.precio;
     lista.appendChild(li);
     suma += producto.precio;
   });
-
   total.textContent = "Total: S/ " + suma;
 }
 
-// 
+
 // BUSCADOR
 
 function buscarProducto() {
   const input = document.getElementById("buscador").value.toLowerCase();
   const productos = document.querySelectorAll(".producto");
-
   productos.forEach((prod) => {
     const nombre = prod.textContent.toLowerCase();
-
     if (nombre.includes(input)) {
       prod.style.display = "block";
     } else {
@@ -55,20 +46,18 @@ function buscarProducto() {
 }
 
 
-// LOGIN 
+// LOGIN
 
 function login() {
   const user = document.getElementById("usuario").value;
   const pass = document.getElementById("password").value;
   const mensaje = document.getElementById("mensaje-login");
-
   if (user === "admin" && pass === "1234") {
     mensaje.textContent = "Bienvenido";
     mensaje.style.color = "green";
-
     setTimeout(() => {
-  window.location.href = "catalogo.html";
-}, 1000);
+      window.location.href = "catalogo.html";
+    }, 1000);
   } else {
     mensaje.textContent = "Datos incorrectos";
     mensaje.style.color = "red";
@@ -94,13 +83,11 @@ function toggleFavorito(elemento, nombre) {
 function validarFormulario() {
   const correo = document.getElementById("correo").value;
   const mensaje = document.getElementById("mensaje-form");
-
   if (correo === "" || !correo.includes("@")) {
     mensaje.textContent = "Correo inválido";
     mensaje.style.color = "red";
     return false;
   }
-
   mensaje.textContent = "Formulario enviado correctamente";
   mensaje.style.color = "green";
   return true;
@@ -108,26 +95,31 @@ function validarFormulario() {
 
 window.onload = function () {
   const guardado = JSON.parse(localStorage.getItem("carrito"));
-
   if (guardado) {
-    carrito = guardado;
+    // Si algún item no tiene imagen, limpiamos el carrito viejo
+    const tieneViejos = guardado.some(p => p.imagen === undefined);
+    if (tieneViejos) {
+      localStorage.removeItem("carrito");
+      carrito = [];
+    } else {
+      carrito = guardado;
+    }
   }
-
   if (typeof mostrarCarrito === "function") {
     mostrarCarrito();
   }
-
   if (typeof cargarCarrito === "function") {
     cargarCarrito();
   }
 };
 
 
-// carrito.html
+// CARRITO.HTML
 
 function cargarCarrito() {
   const contenedor = document.getElementById("contenedor-carrito");
   const total = document.getElementById("total");
+  const btnCheckout = document.querySelector(".btn-checkout");
 
   if (!contenedor) return;
 
@@ -136,29 +128,37 @@ function cargarCarrito() {
   contenedor.innerHTML = "";
   let suma = 0;
 
-  // 🔹 SI ESTÁ VACÍO
+  // SI ESTÁ VACÍO
   if (datos.length === 0) {
-    contenedor.innerHTML = "<p style='text-align:center;'>Tu carrito está vacío 🛒</p>";
-    total.textContent = "";
+    contenedor.innerHTML = "<p style='text-align:center; padding:20px; color:#aaa;'>Tu carrito está vacío 🛒</p>";
+    if (total) total.textContent = "";
+    if (btnCheckout) btnCheckout.style.display = "none";
     return;
   }
 
-  // 🔹 SI HAY PRODUCTOS
+  // SI HAY PRODUCTOS
+  if (btnCheckout) btnCheckout.style.display = "block";
+
   datos.forEach((producto, index) => {
     const div = document.createElement("div");
-    div.classList.add("item-carrito"); // 👈 IMPORTANTE para el CSS
+    div.classList.add("item-carrito");
+
+    const imgHTML = producto.imagen
+      ? `<img src="${producto.imagen}" alt="${producto.nombre}">`
+      : `<img src="img/logo.png" alt="producto" style="opacity:0.3;">`;
 
     div.innerHTML = `
+      ${imgHTML}
       <span>${producto.nombre}</span>
       <p>S/ ${Number(producto.precio)}</p>
-      <button class="btn-eliminar" onclick="eliminarProducto(${index})">X</button>
+      <button class="btn-eliminar" onclick="eliminarProducto(${index})">✕</button>
     `;
 
     contenedor.appendChild(div);
     suma += Number(producto.precio);
   });
 
-  total.textContent = "Total: S/ " + suma;
+  if (total) total.textContent = "Total: S/ " + suma;
 }
 
 // ELIMINAR
@@ -185,37 +185,31 @@ function validarCompra() {
     alert("Todos los campos son obligatorios");
     return false;
   }
-
   if (tarjeta.length < 13 || tarjeta.length > 16) {
     alert("Número de tarjeta inválido");
     return false;
   }
-
   if (cvv.length !== 3) {
     alert("CVV inválido");
     return false;
   }
 
   alert("Compra realizada con éxito");
-
-  window.location.href = "Valoracion.html"; // redirige después
-
+  localStorage.removeItem("carrito");
+  carrito = [];
+  window.location.href = "Valoracion.html";
   return false;
 }
 
 const form = document.querySelector(".form-contacto");
-
 if (form) {
   form.addEventListener("submit", function(e) {
     e.preventDefault();
-
     const mensaje = document.createElement("p");
     mensaje.textContent = "Mensaje enviado correctamente";
     mensaje.style.color = "green";
     mensaje.style.textAlign = "center";
-
     this.appendChild(mensaje);
-
     this.reset();
   });
 }
